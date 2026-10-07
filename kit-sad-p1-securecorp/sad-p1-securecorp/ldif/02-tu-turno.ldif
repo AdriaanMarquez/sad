@@ -1,0 +1,48 @@
+# ✍️ TU TURNO — Escribe aquí debajo 4 entradas. Usa 01-ejemplo.ldif como modelo.
+#
+#   1. TÚ             uid = tu usuario     uidNumber/gidNumber 10001
+#   2. Marta Torres   uid = mtorres        uidNumber/gidNumber 10003
+#   3. El grupo rrhh      con Lucía y Marta
+#   4. El grupo sistemas  contigo
+#
+# Recuerda:
+#   - Una LÍNEA EN BLANCO entre cada entrada.
+#   - Sin tildes ni eñes (Marta Torres, no Martá).
+#   - Los grupos van en ou=groups. Mira en el enunciado cómo es un grupo.
+#   - En "member" va el DN COMPLETO de la persona, no solo su uid.
+# 1. Tu usuario (Adrián)
+dn: uid=amarrod,ou=people,dc=securecorp,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+uid: amarrod
+sn: Marquez Rodriguez
+cn: Adrian Marquez Rodriguez
+uidNumber: 10001
+gidNumber: 10001
+homeDirectory: /home/amarrod
+mail: amarrod@securecorp.local
+
+# 2. Usuario de Marta
+dn: uid=mtorres,ou=people,dc=securecorp,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+uid: mtorres
+sn: Torres
+cn: Marta Torres
+uidNumber: 10003
+gidNumber: 10003
+homeDirectory: /home/mtorres
+mail: mtorres@securecorp.local
+
+# 3. Grupo Recursos Humanos
+dn: cn=rrhh,ou=groups,dc=securecorp,dc=local
+objectClass: groupOfNames
+cn: rrhh
+member: uid=lromero,ou=people,dc=securecorp,dc=local
+member: uid=mtorres,ou=people,dc=securecorp,dc=local
+
+# 4. Grupo Sistemas
+dn: cn=sistemas,ou=groups,dc=securecorp,dc=local
+objectClass: groupOfNames
+cn: sistemas
+member: uid=amarrod,ou=people,dc=securecorp,dc=local
