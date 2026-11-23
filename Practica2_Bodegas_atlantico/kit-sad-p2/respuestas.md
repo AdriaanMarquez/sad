@@ -63,8 +63,8 @@ qué hacen falta los dos?
 
 Nota del análisis **antes** de bastionar (D0):
 
->
+>58
 
 Nota **después** (D4). ¿Por qué no llega a 100? ¿Significa que el servidor sigue inseguro? Comenta un aviso que siga saliendo.
 
->
+>Porque no ponemos todas las sugerencias que nos propone lynis.No solo que lynis podría ponerle mas metodos de seguridad. HTTP-6710 · Add HTTPS to nginx virtual hosts for enhanced protection of sensitive data and privacy
