@@ -9,7 +9,7 @@ banaction = nftables-multiport
 [sshd]
 enabled = true
 backend = auto
-#logpath = /var/log/auth.log
-#maxretry = 3 
-#findtime = 10m
-#bantime = 1h
+logpath = /var/log/auth.log
+maxretry = 3 
+findtime = 10m
+bantime = 1h
